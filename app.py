@@ -12,6 +12,15 @@ def get_option(option):
             summarization = pipeline("summarization")
             summary_text = summarization(sentence)[0]['summary_text']
             st.write(summary_text)
+    if option == "English to Dzongkha":
+        st.title("Please enter text in English")
+        sentence = st.text_area('Enter your text here...')
+        if sentence:
+            summarization = pipeline("summarization")
+            summary_text = summarization(sentence)[0]['summary_text']
+            st.write(summary_text) 
+
+ 
 
 option = st.sidebar.selectbox("Select option",  ("Dzongkha to English","English to Dzongkha"))
 
