@@ -1,6 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 
+st.title("Omdena DHI Dzongkha-English Translation Application")
 
 def get_option(option):
     if option == "Dzongkha to English":
